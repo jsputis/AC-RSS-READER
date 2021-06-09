@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-language" content="en" />
+<title>AC-RSS-Fetcher</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<style>
+    body{font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;background-color: #efefef;font-size: 13px;line-height: 17px !important;}
+    .rssDiv{float: left;padding-right: 35px;}
+    ul{width: 300px !important;text-decoration: none;}
+</style>
+</head>
+<body>
+    <div class="banner">
+        <img src="https://upload.wikimedia.org/wikipedia/en/0/0e/Asian-College-pngv2.png" alt="">
+        <h1>Requirement in IPTECH 2 Subject</h1>
+        <img src="https://ccse.io/wp-content/uploads/2019/03/logo_ccse-300x300.png" alt="">
+
+    </div>
+    <div class="container">
+        <div style="padding: 10px;">
+            
+        <h2>New York News RSS FEED</h2>
+        <div>
+            <div class="rssDiv">
+                <div id="divRss4"></div>
+            </div>
+            <div class="rssDiv">
+
+                <div id="divRss5"></div>
+            </div>
+            <div class="rssDiv">
+
+                <div id="divRss6"></div>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <hr />
+
+        <div>
+            <div class="rssDiv">
+
+                <div id="divRss10"></div>
+            </div>
+            <div class="rssDiv">
+
+                <div id="divRss11"></div>
+            </div>
+            <div class="rssDiv">
+
+                <div id="divRss12"></div>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/RSSFEED.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+       		$('#divRss').RSSFEED({
+				FeedUrl: 'https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml', MaxCount: 2
+			});
+
+			$('#divRss2').RSSFEED({
+				FeedUrl: 'https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml', MaxCount: 3, ShowDesc: true, ShowPubDate: false, DescCharacterLimit: 100
+			});
+			$('#divRss3').RSSFEED({
+				FeedUrl: 'https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml', MaxCount: 4, ShowDesc: false
+			});
+
+			$('#divRss4').RSSFEED({
+				FeedUrl: 'https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml', MaxCount: 2, DateFormat: 'd', DateFormatLang: 'en'
+			});
+
+			$('#divRss5').RSSFEED({
+				FeedUrl: 'https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml', MaxCount: 2, DateFormat: 'D', DateFormatLang: 'fr-FR'
+			});
+			$('#divRss6').RSSFEED({
+				FeedUrl: 'https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml', MaxCount: 2, DateFormat: 'f', DateFormatLang: 'en'
+			});
+
+			$('#divRss10').RSSFEED({
+				FeedUrl: 'https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml', MaxCount: 2, DateFormat: 'MM-dd-yyyy HH:mm', DateFormatLang: 'en'
+			});
+			$('#divRss11').RSSFEED({
+				FeedUrl: 'https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml', MaxCount: 2, DateFormat: 'dd MMMM yyyy', DateFormatLang: 'en'
+			});
+			$('#divRss12').RSSFEED({
+				FeedUrl: 'https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml', MaxCount: 2, DateFormat: 'MM/dd/yyyy'
+			});
+    });
+
+</script>
+</body>
+
+</html>
